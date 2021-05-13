@@ -12,5 +12,5 @@ jobs:
         with:
           PPTOKEN: ${{ secrets.PPTOKEN }}
           PPTOPIC: ${{ secrets.PPTOPIC }}
-          TITLE: "Title"
-          MSG: ${{ github.event.head_commit.message }}
+          TITLE: ${{ github.event.commits[0].author }} + "更新了"
+          MSG: ${{ github.event.commits[0].message }}
