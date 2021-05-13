@@ -7,10 +7,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: 'Send Message to Wechat'
-        uses: HollowMan6/Wechat-Timed-Message@main
-        with:
-          PPTOKEN: ${{ secrets.PPTOKEN }}
-          PPTOPIC: ${{ secrets.PPTOPIC }}
-          TITLE: ${{ github.event.commits[0].author.name }}更新了
-          MSG: ${{ github.event.commits[0].message }}
+      - name: Logging
+        run: |
+          echo "${{toJSON(github.event)}}"
