@@ -7,12 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+      - name: 'Send Message to Wechat'
+        uses: HollowMan6/Wechat-Timed-Message@main
         with:
-          username: 'root'
-          server: '106.54.68.249'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          local_path: './*'
-          remote_path: '/home/doc'
-          args: '-o ConnectTimeout=5'
+          PPTOKEN: ${{ secrets.PPTOKEN }}
+          PPTOPIC: ${{ secrets.PPTOPIC }}
+          TITLE: "Title"
+          MSG: ${{ github.event.head_commit.message }}
