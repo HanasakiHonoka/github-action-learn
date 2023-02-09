@@ -30,5 +30,4 @@ jobs:
           # Required sender full name (address can be skipped):
           from: learn-note-bot # <user@example.com>
           # Optional plain body:
-          body: commit msg |
-                 ${{ github.event.commits[0].message }}
+          body: 变更信息：</br>${{ github.event.commits[0].message }}
