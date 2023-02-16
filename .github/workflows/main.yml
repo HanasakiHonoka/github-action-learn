@@ -30,4 +30,4 @@ jobs:
           # Required sender full name (address can be skipped):
           from: learn-note-bot # <user@example.com>
           # Optional plain body:
-          body: asdasdasd <br> asdasdasd
+          body: asdasdasd <br> \r\n asdasdasd
