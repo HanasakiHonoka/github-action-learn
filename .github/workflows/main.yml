@@ -30,4 +30,5 @@ jobs:
           # Required sender full name (address can be skipped):
           from: learn-note-bot # <user@example.com>
           # Optional plain body:
-          body: asdasdasd <br> \r\n asdasdasd
+          html_body: asdasdasd <br> \r\n asdasdasd
+          convert_markdown: true
